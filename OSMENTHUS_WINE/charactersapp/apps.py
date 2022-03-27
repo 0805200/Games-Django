@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class CharctersappConfig(AppConfig):
+class CharactersappConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'charctersapp'
+    name = 'charactersapp'
