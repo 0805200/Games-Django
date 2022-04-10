@@ -1,6 +1,6 @@
 <html>
     <h1>Список персонажей:</h1>
     {% for current in enemies %}
-    <a href="{% url 'current_characters' %}"> {{current.characterName}} </a>
+    <a href="{% url 'current_characters' charName=current.characterName  %}"> {{current.characterName}} </a>
     {% endfor %}
 </html>

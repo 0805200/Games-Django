@@ -10,9 +10,10 @@ urlpatterns = [
     path("", initPage),
     path('about/', aboutPage, name = "about_path"),
     path("characters/", charsPage, name = "name"),
-    path('currentCharacter/', CurrentCharacter, name = "current_characters")
+    path('currentCharacter/<str:charName>', CurrentCharacter, name = "current_characters")
 
 ]
 
-if settings.DEBUG:
+if settings: 
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
